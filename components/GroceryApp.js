@@ -118,6 +118,23 @@ export default class GroceryApp extends Component {
     )
   }
 
+  _addItem() {
+    Alert.prompt(
+      'Add New Item',
+      null,
+      [
+        {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {
+          text: 'Add',
+          onPress: (text) => {
+            this.itemsRef.push({ title: text })
+          }
+        },
+      ],
+      'plain-text'
+    );
+  }
+
   sendInput(text) {
     this.itemsRef.push({ title: text})
     this.closeDialog();
