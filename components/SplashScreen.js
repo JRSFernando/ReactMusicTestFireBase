@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { Image } from 'react-native';
 
 class SplashScreen extends React.Component {
 
@@ -30,20 +30,6 @@ class SplashScreen extends React.Component {
     return (
       <Image source={require('../img/Splash.png')}  style={{flex: 1, height:undefined, width:undefined}}/>
     );
-  }
-}
-
-const styles = {
-  viewStyles: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'orange'
-  },
-  textStyles: {
-    color: 'white',
-    fontSize: 40,
-    fontWeight: 'bold'
   }
 }
 

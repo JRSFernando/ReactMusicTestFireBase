@@ -112,27 +112,9 @@ export default class GroceryApp extends Component {
                 submitInput={ (inputText) => {this.sendInput(inputText)} }
                 closeDialog={this.closeDialog}>
             </AlertInput>
-        {/* <Text text={this._key}></Text> */}
 
       </View>
     )
-  }
-
-  _addItem() {
-    Alert.prompt(
-      'Add New Item',
-      null,
-      [
-        {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-        {
-          text: 'Add',
-          onPress: (text) => {
-            this.itemsRef.push({ title: text })
-          }
-        },
-      ],
-      'plain-text'
-    );
   }
 
   sendInput(text) {
@@ -145,7 +127,7 @@ export default class GroceryApp extends Component {
     const onPress = () => {
       Alert.alert(
         'Remove',
-        null,
+        'Remove Selected Item?',
         [
           {text: 'Remove', onPress: (text) => this.itemsRef.child(item._key).remove()},
           {text: 'Cancel', onPress: (text) => console.log('Cancelled')}
