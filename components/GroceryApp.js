@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import ReactNative from 'react-native';
 import AlertInput from 'react-native-dialog-input';
-const firebase = require('firebase');
+import { db } from './firebase_conf';
 const StatusBar = require('./StatusBar');
 const ActionButton = require('./ActionButton');
 const ListItem = require('./ListItem');
@@ -18,15 +18,6 @@ const {
   Alert,
   Button,
 } = ReactNative;
-
-// Initialize Firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyDZ6XtTeTBalKyLmPV1Dzw1k1Q3kYq_AYM",
-    authDomain: "react-native-db-9ee53.firebaseapp.com",
-    databaseURL: "https://react-native-db-9ee53.firebaseio.com",
-    storageBucket: "react-native-db-9ee53.appspot.com",
-};
-const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 export default class GroceryApp extends Component {
 
@@ -53,11 +44,11 @@ export default class GroceryApp extends Component {
         rowHasChanged: (row1, row2) => row1 !== row2,
       })
     };
-    this.itemsRef = this.getRef().child('items');
+    this.itemsRef = this.getRef();
   }
 
   getRef() {
-    return firebaseApp.database().ref();
+    return db.ref('/items');
   }
 
   listenForItems(itemsRef) {

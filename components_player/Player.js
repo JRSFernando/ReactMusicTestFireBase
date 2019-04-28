@@ -99,7 +99,8 @@ export default class Player extends Component {
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
-        <Header message="Playing From Charts" onDownPress={() => this.props.navigation.navigate('GroceryApp')}/>
+        <Header message="Playing From Charts" onDownPress={() => this.props.navigation.navigate('GroceryApp')}
+        onQueuePress={() => this.props.navigation.navigate('TestNavigation')}/>
         <AlbumArt url={track.albumArtUrl} />
         <TrackDetails title={track.title} artist={track.artist} />
         {/* <SeekBar
