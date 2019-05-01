@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Slider from 'react-native-slider';
 
 import {
   View,
@@ -8,8 +8,6 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-
-var Slider = require('react-native-slider');
 
 function pad(n, width, z=0) {
   n = n + '';

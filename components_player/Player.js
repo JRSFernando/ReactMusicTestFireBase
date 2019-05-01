@@ -103,11 +103,11 @@ export default class Player extends Component {
         onQueuePress={() => this.props.navigation.navigate('TestNavigation')}/>
         <AlbumArt url={track.albumArtUrl} />
         <TrackDetails title={track.title} artist={track.artist} />
-        {/* <SeekBar
+        <SeekBar
           onSeek={this.seek.bind(this)}
           trackLength={this.state.totalLength}
           onSlidingStart={() => this.setState({paused: true})}
-          currentPosition={this.state.currentPosition} /> */}
+          currentPosition={this.state.currentPosition} />
         <Controls
           onPressRepeat={() => this.setState({repeatOn : !this.state.repeatOn})}
           repeatOn={this.state.repeatOn}
