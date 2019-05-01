@@ -20,6 +20,18 @@ export const TRACKS = [
     albumArtUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Drake_-_Hotline_Bling.png',
     audioUrl: 'http://s2.faz-dl3.ir/ali/music/farv/album/billboard%20hot%20100%20april%202016/028.%20Drake%20-%20Hotline%20Bling.mp3',
   },
+  {
+    title: 'Strawberry Swing',
+    artist: 'Coldplay',
+    albumArtUrl: 'https://i.pinimg.com/736x/30/f9/c1/30f9c10a69c6833641fdd9ea1c7f9693.jpg',
+    audioUrl: 'http://dl4.mid.az:81/endir.php?file=uploads/Sanya/coldplay_-_strawberry_swing_www.mid.az.mp3',
+  },
+  {
+    title: 'One Headlight',
+    artist: 'The Wallflowers',
+    albumArtUrl: 'https://images-na.ssl-images-amazon.com/images/I/71cAAwy-r-L._SX355_.jpg',
+    audioUrl: 'https://s-a7565b77.mp3engine.xyz/2166a999587d472fe8201/The%20Wallflowers%20-%20One%20Headlight.mp3',
+  },
 ];
 
 export default class App extends Component {

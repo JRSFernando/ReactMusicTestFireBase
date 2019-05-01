@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Button, AppRegistry } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import { db } from './firebase_conf';
 
 let itemsRef = db.ref('/items');
